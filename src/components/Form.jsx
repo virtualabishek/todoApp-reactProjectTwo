@@ -5,7 +5,7 @@ export default function ({ todos, setTodos }) {
   function handleSubmit(e) {
     e.preventDefault();
     setTodos([...todos, todo]);
-    setTodo("");
+    setTodo({ name: "", done: true });
   }
   return (
     <form className={styles.todoForm} onSubmit={handleSubmit}>
